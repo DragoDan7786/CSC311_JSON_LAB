@@ -24,7 +24,9 @@ public class Main {
             FileReader fr = new FileReader("newjson.json");
             GsonBuilder builder = new GsonBuilder();
             Gson gson = builder.create();
-            
+            Employee e2 = gson.fromJson(fr, Employee.class);
+            System.out.println("Name is: " + e2.getName());
+            System.out.println("ID is: " + e2.getId());
             
         } catch (FileNotFoundException ex) {
             ex.getMessage();
